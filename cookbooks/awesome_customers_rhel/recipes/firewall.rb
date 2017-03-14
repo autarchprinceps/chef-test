@@ -4,7 +4,9 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
-ports = [22, 80]
+include_recipe 'firewall::default'
+
+ports = node['awesome_customers_rhel']['open_ports']
 firewall_rule "open ports #{ports}" do
 	port ports
 end
