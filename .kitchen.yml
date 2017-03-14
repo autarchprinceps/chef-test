@@ -13,12 +13,18 @@ verifier:
   name: inspec
 
 platforms:
-  - name: centos
-    driver_config:
-        image: centos
-        platform: rhel
-    run_list:
-        - recipe[yum]
+        - name: centos
+          driver_config:
+              image: centos
+              platform: rhel
+          run_list:
+              - recipe[yum]
+        #        - name: fedora
+        #          driver_config:
+        #                  image: fedora
+        #                  platform: fedora
+        #          run_list:
+        #                  - recipe[yum]
 
 suites:
   - name: default
