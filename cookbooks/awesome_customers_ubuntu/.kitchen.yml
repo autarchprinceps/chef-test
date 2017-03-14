@@ -13,16 +13,12 @@ verifier:
   name: inspec
 
 platforms:
-        - name: centos-7
-          driver_config:
-                  forward:
-                          - 22:8022
-                          - 80:8080
+  - name: ubuntu-16.10
 
 suites:
   - name: default
     run_list:
-      - recipe[awesome_customers_rhel::default]
+      - recipe[awesome_customers_ubuntu::default]
     verifier:
       inspec_tests:
         - test/smoke/default

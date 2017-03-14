@@ -1,4 +1,4 @@
-# awesome_customers_rhel
+# awesome_customers_ubuntu
 
 TODO: Enter the cookbook description here.
 

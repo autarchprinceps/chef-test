@@ -1,12 +1,12 @@
 #
-# Cookbook:: awesome_customers_rhel
+# Cookbook:: awesome_customers_ubuntu
 # Spec:: default
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 require 'spec_helper'
 
-describe 'awesome_customers_rhel::firewall' do
+describe 'awesome_customers_ubuntu::default' do
   context 'When all attributes are default, on an unspecified platform' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new

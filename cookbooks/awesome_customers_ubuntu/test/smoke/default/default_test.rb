@@ -1,6 +1,6 @@
 # # encoding: utf-8
 
-# Inspec test for recipe awesome_customers_rhel::firewall
+# Inspec test for recipe awesome_customers_ubuntu::default
 
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
