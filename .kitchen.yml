@@ -23,8 +23,7 @@ platforms:
 suites:
   - name: default
     run_list:
-            #  - recipe[chef-test::default]
-            - recipe[learn_chef_httpd::default]
+        - recipe[chef-test::default]
     verifier:
       inspec_tests:
         - test/smoke/default
