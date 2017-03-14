@@ -13,13 +13,11 @@ verifier:
   name: inspec
 
 platforms:
-        #- name: centos-7
-        - name: amazonlinux
+        - name: centos-7
           driver_config:
-              image: amazonlinux
-              platform: rhel
-          run_list:
-              - recipe[yum]
+                  forward:
+                          - 22:8022
+                          - 80:8080
 
 suites:
   - name: default

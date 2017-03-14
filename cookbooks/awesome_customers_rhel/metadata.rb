@@ -20,3 +20,6 @@ version '0.1.0'
 
 depends 'selinux', '~> 1'
 depends 'firewall', '~> 2.5'
+depends 'yum'
+depends 'yum_package'
+# depends 'yum-centos'
