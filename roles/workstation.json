@@ -12,7 +12,8 @@
    },
    "chef_type": "role",
    "run_list": [
-	   "recipe[chef-client::default]"
+	   "recipe[chef-client::default]",
+	   "recipe[selinux::permissive]"
    ],
    "env_run_lists": {
    }
