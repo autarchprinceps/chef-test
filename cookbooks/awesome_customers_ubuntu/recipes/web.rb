@@ -7,7 +7,7 @@
 # Install Apache and start the service.
 httpd_service 'customers' do
 	mpm 'prefork'
-	package_name 'apache2'
+	# package_name 'apache2'
 	action [:create, :start]
 end
 
