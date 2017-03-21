@@ -17,8 +17,11 @@ issues_url 'https://github.com/autarchprinceps/chef-test/awesome_customers_ubunt
 # `View Source` link will be displayed on this cookbook's page when uploaded to
 # a Supermarket.
 #
-source_url 'https://github.com/autarchprinceps/chef-test/awesome_customers_ubuntu' if respond_to?(:source_url)
+source_url 'https://github.com/autarchprinceps/chef-test/cookbooks/awesome_customers_ubuntu' if respond_to?(:source_url)
 
 depends 'apt'
 depends 'firewall'
 depends 'httpd'
+depends 'mysql'
+depends 'mysql2_chef_gem'
+depends 'database'

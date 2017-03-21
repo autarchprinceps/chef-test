@@ -16,6 +16,9 @@ verifier:
 
 platforms:
   - name: ubuntu-14.04
+    #driver:
+    #    box: asy/trusty64-lxc
+    #    provider: lxc
 
 suites:
   - name: default
@@ -25,3 +28,7 @@ suites:
       inspec_tests:
         - test/smoke/default
     attributes:
+        awesome_customers_ubuntu:
+            database:
+                root_password: 'mysql_root_password'
+                admin_password: 'mysql_admin_password'
