@@ -19,9 +19,9 @@ issues_url 'https://github.com/autarchprinceps/chef-test/awesome_customers_ubunt
 #
 source_url 'https://github.com/autarchprinceps/chef-test/cookbooks/awesome_customers_ubuntu' if respond_to?(:source_url)
 
-depends 'apt'
-depends 'firewall'
-depends 'httpd'
-depends 'mysql'
-depends 'mysql2_chef_gem'
-depends 'database'
+depends 'apt', '~> 4.0'
+depends 'firewall'#, '~> 2.5'
+depends 'httpd', '~> 0.4'
+depends 'mysql', '~> 7.0'
+#depends 'mysql2_chef_gem', '~> 1.1'
+#depends 'database', '~> 6.0'
