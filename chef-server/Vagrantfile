@@ -36,13 +36,13 @@ while (curl http://localhost:8000/_status) | grep "fail"; do sleep 15s; done
 
 # create admin user
 echo "Creating a user and organization..."
-sudo chef-server-ctl user-create autarch autarch princeps autarch@outlook.com password --filename autarch.pem
-sudo chef-server-ctl org-create petor "Petor" --association_user autarch --filename petor-validator.pem
+sudo chef-server-ctl user-create admin Bob Admin admin@4thcoffee.com insecurepassword --filename admin.pem
+sudo chef-server-ctl org-create 4thcoffee "Fourth Coffee, Inc." --association_user admin --filename 4thcoffee-validator.pem
 
 # copy admin RSA private key to share
 echo "Copying admin key to /vagrant/secrets..."
 mkdir -p /vagrant/secrets
-cp -f /home/vagrant/autarch.pem /vagrant/secrets
+cp -f /home/vagrant/admin.pem /vagrant/secrets
 
 echo "Your Chef server is ready!"
 EOF
@@ -73,7 +73,7 @@ Vagrant.configure(2) do |config|
 
     cs.vm.provider 'virtualbox' do |v|
       v.memory = 2048
-      v.cpus = 4
+      v.cpus = 2
     end
   end
 
